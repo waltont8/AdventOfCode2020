@@ -9,3 +9,6 @@ Browsing around the internet, a lot of Haskell solutions seem to make use of the
 
 ## Day 3: Toboggan Trajectory
 Most solutions seem to have used modulus for the infinite ski slope but I'd used cycle, this being haskell. Fairly straightforward. I built the part 1 solution to accept parameters for the step in anticipation of part 2 so there is only one solution here.
+
+## Day 4:Passport Processing
+I took a bit longer on part 1, putting the data into a list of tuples, as I figured I would need some sort of database to query in part 2. I found this one a bit annoying, it's right on the border of "can hack it together with list operations" and "needs a parser or the regexp library". If we have to come back to this I'll probably rewrite as a parser into record structures.
