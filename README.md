@@ -12,3 +12,6 @@ Most solutions seem to have used modulus for the infinite ski slope but I'd used
 
 ## Day 4: Passport Processing
 I took a bit longer on part 1, putting the data into a list of tuples, as I figured I would need some sort of database to query in part 2. I found this one a bit annoying, it's right on the border of "can hack it together with list operations" and "needs a parser or the regexp library". If we have to come back to this I'll probably rewrite as a parser into record structures.
+
+## Day 5: Binary Boarding
+I see that the seat code is two binary numbers together and this can be used to take some shortbuts, but I just like recursive subdivision, it's pretty. Also, you never know what's coming in part 2 so it pays not to be too hacky. I didn't /really/ finish part 2, it's obvious from printing out the list of empty seats which one it is, so I just went with that.
