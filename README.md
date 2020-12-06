@@ -15,3 +15,6 @@ I took a bit longer on part 1, putting the data into a list of tuples, as I figu
 
 ## Day 5: Binary Boarding
 I see that the seat code is two binary numbers together and this can be used to take some shortbuts, but I just like recursive subdivision, it's pretty. Also, you never know what's coming in part 2 so it pays not to be too hacky. I didn't /really/ finish part 2, it's obvious from printing out the list of empty seats which one it is, so I just went with that.
+
+## Day 6: Custom Customs
+Really felt like there should be an easy arrow solution here, with the results from each group being piped through count and frequency analysis and then being filtered back together. A filter that takes answers one entry at a time. Couldn't quite see how to do that so I just stepped through the easy way.
