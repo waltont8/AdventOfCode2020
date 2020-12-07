@@ -18,3 +18,6 @@ I see that the seat code is two binary numbers together and this can be used to 
 
 ## Day 6: Custom Customs
 Really felt like there should be an easy arrow solution here, with the results from each group being piped through count and frequency analysis and then being filtered back together. A filter that takes answers one entry at a time. Couldn't quite see how to do that so I just stepped through the easy way.
+
+## Day 7: Handy Haversacks
+Tried to keep with the spirit of things and get the answers fast. I stripped out all punctuation, whitespaces and the letter s then split each line on "contain" and turned it into a tuple. This gave me an array of (colour, contents) which I search with isInfixOf. Very easy for part 1, unsurprisingly part 2 made a bit of a mess but it gets the answer...
