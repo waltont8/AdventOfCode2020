@@ -21,3 +21,6 @@ Really felt like there should be an easy arrow solution here, with the results f
 
 ## Day 7: Handy Haversacks
 Tried to keep with the spirit of things and get the answers fast. I stripped out all punctuation, whitespaces and the letter s then split each line on "contain" and turned it into a tuple. This gave me an array of (colour, contents) which I search with isInfixOf. Very easy for part 1, unsurprisingly part 2 made a bit of a mess but it gets the answer...
+
+## Day 8: Handheld Halting
+Flashbacks to intcode from last year. Happy enough with part 1. Part 2 is very inefficient. You could probably build a graph from the program, identify the loops in part 1 and then break out directly but that would have taken too long to figure out. Just bruteforce the answer, it takes microseconds.
