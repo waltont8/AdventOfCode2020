@@ -24,3 +24,6 @@ Tried to keep with the spirit of things and get the answers fast. I stripped out
 
 ## Day 8: Handheld Halting
 Flashbacks to intcode from last year. Happy enough with part 1. Part 2 is very inefficient. You could probably build a graph from the program, identify the loops in part 1 and then break out directly but that would have taken too long to figure out. Just bruteforce the answer, it takes microseconds.
+
+## Day 9:Encoding Error
+Pretty easy again. List comprehension to generate the possible ranges and then a liberal sprinkling of arrows in part 2.
