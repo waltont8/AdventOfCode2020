@@ -27,3 +27,6 @@ Flashbacks to intcode from last year. Happy enough with part 1. Part 2 is very i
 
 ## Day 9:Encoding Error
 Pretty easy again. List comprehension to generate the possible ranges and then a liberal sprinkling of arrows in part 2.
+
+## Day 10:Adapter Array
+Part one was just some data fiddling. Part two was much harder. I tried a brute force approach, because often this just works with haskell because of some behind-the-scenes magic. Not this time! Had to have a think about how the list could be split into subsections on gaps of 3 that couldn't be moved. There are two functions here. One that spits the list on 3gaps and one that finds all possible routes through the sub lists.
