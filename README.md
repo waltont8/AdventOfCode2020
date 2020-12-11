@@ -30,3 +30,6 @@ Pretty easy again. List comprehension to generate the possible ranges and then a
 
 ## Day 10:Adapter Array
 Part one was just some data fiddling. Part two was much harder. I tried a brute force approach, because often this just works with haskell because of some behind-the-scenes magic. Not this time! Had to have a think about how the list could be split into subsections on gaps of 3 that couldn't be moved. There are two functions here. One that spits the list on 3gaps and one that finds all possible routes through the sub lists.
+
+## Day 11: Seating System
+I always find dealing with multi-dimentional data to be a huge pain in Haskell and you don't get much for free out of the compiler either. Usually I would have had a Data.Map match the coordinates to the data and then hidden this all behind lookups. This time I kept a list of tuples of position and data. I need to spend some time thinking about what the best way to do this is when I'm not under any time pressure. The difference between part 1 and 2 here is just a single function so you can swap the commented out code over to get part 1. Given how much of a mess I get in with haskell and mazes I spent some time with types.
