@@ -33,3 +33,6 @@ Part one was just some data fiddling. Part two was much harder. I tried a brute 
 
 ## Day 11: Seating System
 I always find dealing with multi-dimentional data to be a huge pain in Haskell and you don't get much for free out of the compiler either. Usually I would have had a Data.Map match the coordinates to the data and then hidden this all behind lookups. This time I kept a list of tuples of position and data. I need to spend some time thinking about what the best way to do this is when I'm not under any time pressure. The difference between part 1 and 2 here is just a single function so you can swap the commented out code over to get part 1. Given how much of a mess I get in with haskell and mazes I spent some time with types.
+
+## Day 12: Rain Risk
+Easy again. I find it's easy to get confused when rotating things so I wrote out the turnLeft and turnRight function in a long form. Different files for part 1 and part 2, there didn't seem to be an obvious transition between the two...
