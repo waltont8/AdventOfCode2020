@@ -36,3 +36,7 @@ I always find dealing with multi-dimentional data to be a huge pain in Haskell a
 
 ## Day 12: Rain Risk
 Easy again. I find it's easy to get confused when rotating things so I wrote out the turnLeft and turnRight function in a long form. Different files for part 1 and part 2, there didn't seem to be an obvious transition between the two...
+
+
+## Day 13: Shuttle Search
+I didn't like this one. Part 2 clearly had some mathsy answer I didn't know, google says it was chinese remainder theorem, haskell has a chineseremainder function. Stepping through all numbers, increasing the step size to a product of buses we've matched so far would have been my fallback. That would probably have been fast enough.
