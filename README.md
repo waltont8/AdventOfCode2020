@@ -41,5 +41,8 @@ Easy again. I find it's easy to get confused when rotating things so I wrote out
 ## Day 13: Shuttle Search
 I didn't like this one. Part 2 clearly had some mathsy answer I didn't know, google says it was chinese remainder theorem, haskell has a chineseremainder function. Stepping through all numbers, increasing the step size to a product of buses we've matched so far would have been my fallback. That would probably have been fast enough.
 
-## Day 14: Day 14: Docking Data
+## Day 14: Docking Data
 That felt more programmery. Used a Data.Map to represent memory. Haven't done much bit twiddling in haskell, I would normally do that in C or C++, so that was interesting. I am sure there is a nicer way of generating all the valid permutations of each address, but a quick hoogle failed to find anything so I hacked something up with borrowing the bits out of a sequence of numbers. Seperate part 2 again.
+
+## Day 15: Rambunctious Recitation
+No input file. Pretty straightforward "Can you read the question" question. I started with a Map because Maps are performance magic and so part2 came for free.
