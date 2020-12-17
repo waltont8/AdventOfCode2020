@@ -46,3 +46,9 @@ That felt more programmery. Used a Data.Map to represent memory. Haven't done mu
 
 ## Day 15: Rambunctious Recitation
 No input file. Pretty straightforward "Can you read the question" question. I started with a Map because Maps are performance magic and so part2 came for free.
+
+## Day 16: Ticket Translation
+Long one today. I only took part 2 as far as finding the column numbers and did the final calculation on a calculator, the final mapping code wasn't the interesting bit and would have been messy. Know when not to code. Still parsing things with split. I feel there must be a proof that any parser can be built with splits and joins...
+
+## Day 17: Day 17: Conway Cubes
+Keeping a list of active cells in a Data.Set, then turn the set into a list, generate neighbours of everything in the list and try to activate each cell in the list. Part2 was going to be run for 1 billion turns or run in n dimensions so I invested more time in part 1 which meant part 2 came for free. This was a good one, I like puzzles in higher dimensions.
