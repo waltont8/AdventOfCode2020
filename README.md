@@ -52,3 +52,6 @@ Long one today. I only took part 2 as far as finding the column numbers and did 
 
 ## Day 17: Day 17: Conway Cubes
 Keeping a list of active cells in a Data.Set, then turn the set into a list, generate neighbours of everything in the list and try to activate each cell in the list. Part2 was going to be run for 1 billion turns or run in n dimensions so I invested more time in part 1 which meant part 2 came for free. This was a good one, I like puzzles in higher dimensions.
+
+## Day 18: Operation Order
+Just used Parsec and a calculator grammar I had hanging around. Easiest one yet as haskell did all the heavy lifting.
