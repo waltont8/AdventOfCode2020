@@ -55,3 +55,6 @@ Keeping a list of active cells in a Data.Set, then turn the set into a list, gen
 
 ## Day 18: Operation Order
 Just used Parsec and a calculator grammar I had hanging around. Easiest one yet as haskell did all the heavy lifting.
+
+## Day 19: Monster Messages
+Tricky one today. Generate a parser from a grammar in part 1. Same thing in part 2 but a more complicated grammar with recursion and where greedy parsing fails. Needs more cleanup on this one.
