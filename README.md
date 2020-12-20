@@ -58,3 +58,6 @@ Just used Parsec and a calculator grammar I had hanging around. Easiest one yet 
 
 ## Day 19: Monster Messages
 Tricky one today. Generate a parser from a grammar in part 1. Same thing in part 2 but a more complicated grammar with recursion and where greedy parsing fails. The parsing code is a bit c&p but it's supposed to be a race. I think this one took me the longest so far.
+
+## Day 20: Jurassic Jigsaw
+Part 1 was quite quick, just hack around and find the tiles with only two matching edges. Moment of panic when I thought there matches might not be unique, but each edge matches only one other. Part 2 was again easy but involved sooo many steps, took a few hours. I just stream of consciousness the code for these easy ones, I'm sure you could refactor it to nothing. There are a few hard coded bits in there just to speed it along.
