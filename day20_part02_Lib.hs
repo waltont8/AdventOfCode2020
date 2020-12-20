@@ -12,15 +12,11 @@ import qualified Data.Map.Lazy as M
 {-- Store a tile. --}
 data Tile = Tile {
     tID :: Int
-   ,tn :: String  --- Stored >>>>
-   ,te :: String  --- Stored VVV
-   ,ts :: String  --- Stored >>>
-   ,tw :: String  --- Stored VVV
    ,a :: [String]
 } deriving (Eq)
 
 instance Show Tile where
-    show (Tile _id _ _ _ _ a) = ("\nID:"++(show _id)++"\n"++(concat (intersperse "\n" a )))
+    show (Tile _id a) = ("\nID:"++(show _id)++"\n"++(concat (intersperse "\n" a )))
 
 {-- Some helpful direction --}
 
@@ -34,23 +30,23 @@ mir West = East
 
 -- Map directions to data fields, making it easier to reverse them
 getDir dir t
-    | dir == North = tn t
-    | dir == East = te t
-    | dir == South = ts t
-    | dir == West = tw t
+    | dir == North = head (a t)
+    | dir == East = map last (a t) 
+    | dir == South = last (a t)
+    | dir == West = map head (a t) 
 
 type Point = (Int, Int)
 
 type Photo = M.Map Point Tile
 
 flipV :: Tile -> Tile
-flipV r = Tile (tID r) (ts r) (reverse (te r)) (tn r) (reverse (tw r)) (reverse (a r))
+flipV r = Tile (tID r) (reverse (a r))
 
 rotL :: Tile -> Tile
-rotL r = Tile (tID r) (te r) (reverse (ts r)) (tw r) (reverse (tn r)) (rCCW (a r))
+rotL r = Tile (tID r) (rCCW (a r))
 
 -- Get a point from the complete Photo, still in the map
-getPoint p y x = ((result!!(y `mod` 8))!!(x `mod` 8))
+getPoint p y x = (((map (tail . init) (init $ tail result))!!(y `mod` 8))!!(x `mod` 8))
     where
         result = a (fromJust $ M.lookup (x `div` 8, y`div` 8) p)
 
@@ -73,21 +69,21 @@ someFunc = do
 ---Replace the monster
 replaceAtN str1 str2 n = pre ++ newMid
   where
+    matchMonster _ [] = True
+    matchMonster (h1:xs1) (h2:xs2)
+        | (h2 == '#') && (h1 == h2) = matchMonster xs1 xs2
+        | (h2 == '.') = matchMonster xs1 xs2
+        | otherwise = False
+
+    replaceFromStart (h1:xs1) (h2:xs2)
+        | (h1 == h2) && (h1 == '#') = 'O':(replaceFromStart xs1 xs2)
+        | otherwise = h1:(replaceFromStart xs1 xs2)
+    replaceFromStart s [] = s
+
     pre = take n str1
     mid = drop n str1
     newMid = if (matchMonster mid str2) then replaceFromStart mid str2 else mid
 
-matchMonster _ [] = True
-matchMonster (h1:xs1) (h2:xs2)
-    | (h2 == '#') && (h1 == h2) = matchMonster xs1 xs2
-    | (h2 == '.') = matchMonster xs1 xs2
-    | otherwise = False
-
-
-replaceFromStart (h1:xs1) (h2:xs2)
-    | (h1 == h2) && (h1 == '#') = 'O':(replaceFromStart xs1 xs2)
-    | otherwise = h1:(replaceFromStart xs1 xs2)
-replaceFromStart s [] = s
 ---- / Replace the monster
 
 getRow p n = map (getPoint p n) [0..95]
@@ -131,7 +127,7 @@ matchFind d a b = listToMaybe $ concat $ [(singleMatch d a b)
 
 
 tileBuilder :: [String] -> Tile
-tileBuilder s = Tile (tileID) (s!!1) (map last (tail s)) (s!!10) (map head (tail s)) (map (tail . init) (init $ tail (drop 1 s)))
+tileBuilder s = Tile (tileID) (drop 1 s)
     where
         tileID = read (takeWhile isDigit (drop 5 (s!!0))) :: Int
 
@@ -143,7 +139,6 @@ listSplit p s = case dropWhile p s of
                 s' -> w : listSplit p s''
                   where (w, s'') = break p s'
 
-rCW =  map reverse . transpose 
 rCCW = transpose . map reverse
 
 frequency s = map (\x -> ([head x], length x)) . group . sort $ s   
