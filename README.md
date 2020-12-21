@@ -61,3 +61,6 @@ Tricky one today. Generate a parser from a grammar in part 1. Same thing in part
 
 ## Day 20: Jurassic Jigsaw
 Part 1 was quite quick, just hack around and find the tiles with only two matching edges. Moment of panic when I thought there matches might not be unique, but each edge matches only one other. Part 2 was again easy but involved sooo many steps, took a few hours. I just stream of consciousness the code for these easy ones, I'm sure you could refactor it to nothing. There are a few hard coded bits in there just to speed it along.
+
+## Day 21: Allergen Assessment
+Took a while to get my head around what was being asked for in this one, needed to work through the examples. The "Allergens aren't always marked" hint makes it all quite hard to think about. I tend to over engineer part 1s and I did so here, so part 2 was easy.
