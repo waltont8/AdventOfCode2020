@@ -64,3 +64,6 @@ Part 1 was quite quick, just hack around and find the tiles with only two matchi
 
 ## Day 21: Allergen Assessment
 Took a while to get my head around what was being asked for in this one, needed to work through the examples. The "Allergens aren't always marked" hint makes it all quite hard to think about. I tend to over engineer part 1s and I did so here, so part 2 was easy.
+
+## Day 22: Crab Combat
+Today's puzzle was about "can you read the question carefully". Other than that, the format really fit well with haskell. Almost looks like the question was designed with haskell in mind.
