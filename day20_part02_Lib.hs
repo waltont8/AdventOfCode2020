@@ -50,6 +50,9 @@ getPoint p y x = (((map (tail . init) (init $ tail result))!!(y `mod` 8))!!(x `m
     where
         result = a (fromJust $ M.lookup (x `div` 8, y`div` 8) p)
 
+-- Note that I got lucky and the corner I started with brings out the result the correct way up
+-- if you are less lucky, you may need to flip the resultant image a few times until you see
+-- some monsters!
 someFunc :: IO ()
 someFunc = do
     rows <- fmap lines $ readFile "input.txt"
