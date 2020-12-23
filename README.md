@@ -67,3 +67,6 @@ Took a while to get my head around what was being asked for in this one, needed 
 
 ## Day 22: Crab Combat
 Today's puzzle was about "can you read the question carefully". Other than that, the format really fit well with haskell. Almost looks like the question was designed with haskell in mind.
+
+## Day 23: Crab Cups
+Part 1, very simple, instant answer. Part 2, the haskell magic failed me and the result was looking like 19 days to completion. Impressively, it was maxing out 7 of the 8 cores on this laptop so autoparallelization was happening. I tried a faster data structures (sequence ) with the same algorithm but did no achieve the needed speedup. I wrote a new algorithm using maps to hold a linked list, and improved the min, max and elem algorithms. This got the job done in about 25s.
