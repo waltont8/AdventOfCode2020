@@ -70,3 +70,6 @@ Today's puzzle was about "can you read the question carefully". Other than that,
 
 ## Day 23: Crab Cups
 Part 1, very simple, instant answer. Part 2, the haskell magic failed me and the result was looking like 19 days to completion. Impressively, it was maxing out 7 of the 8 cores on this laptop so autoparallelization was happening. I tried a faster data structures (sequence ) with the same algorithm but did no achieve the needed speedup. I wrote a new algorithm using maps to hold a linked list, and improved the min, max and elem algorithms. This got the job done in about 25s.
+
+## Day 24: Lobby Layout
+I love the hex grid puzzles, they're fun. Although I do immediately hide them behind a bunch of types so I can treat them like a 2D array (of sorts). Easy enough, given that I'm not worrying about how long any of this takes. A very different approach would be needed for a competetive time. And a lot more prep. And probably doing it in python.
