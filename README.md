@@ -73,3 +73,6 @@ Part 1, very simple, instant answer. Part 2, the haskell magic failed me and the
 
 ## Day 24: Lobby Layout
 I love the hex grid puzzles, they're fun. Although I do immediately hide them behind a bunch of types so I can treat them like a 2D array (of sorts). Easy enough, given that I'm not worrying about how long any of this takes. A very different approach would be needed for a competetive time. And a lot more prep. And probably doing it in python.
+
+## Day 25: Combo Breaker
+Public key encryption breaking with very small numbers. Fortunately that was a tiny puzzle as I have presents to open. Awesome stuff.
